@@ -4,6 +4,10 @@
   "description": "A collection of snippets for coffeescript imported from TextMate files.",
   "version": "0.0.0",
   "publisher": "jhessin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhessin/vscode-coffee-snippets.git"
+  },
   "engines": {
     "vscode": "^1.20.0"
   },
