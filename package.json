@@ -1,21 +1,19 @@
 {
-    "name": "coffee-snippets",
-    "displayName": "Coffee Snippets (from TextMate)",
-    "description": "A collection of snippets for coffeescript imported from TextMate files.",
-    "version": "0.0.1",
-    "publisher": "jhessin",
-    "engines": {
-        "vscode": "^1.20.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "coffeescript",
-                "path": "./snippets/snippets.json"
-            }
-        ]
-    }
+  "name": "coffee-snippets",
+  "displayName": "Coffee Snippets (from TextMate)",
+  "description": "A collection of snippets for coffeescript imported from TextMate files.",
+  "version": "0.0.0",
+  "publisher": "jhessin",
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "categories": ["Snippets", "Languages"],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "coffeescript",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
 }
