@@ -3,5 +3,5 @@ All notable changes to the "coffee-snippets" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## v 1.0.0
 - Initial release
