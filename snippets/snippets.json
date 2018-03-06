@@ -45,7 +45,7 @@
     "prefix": "#",
     "body": "#{${1:$TM_SELECTED_TEXT}}",
     "description": "Interpolated Code",
-    "scope": "(string.quoted.double.coffee) - string source, (string.quoted.double.heredoc.coffee) - string source"
+    "scope": "source.coffee"
   },
   "foro": {
     "prefix": "foro",
