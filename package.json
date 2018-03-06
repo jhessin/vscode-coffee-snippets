@@ -1,62 +1,59 @@
 {
-    "name": "coffee-snippets",
-    "displayName": "Coffee Snippets (from TextMate)",
-    "description": "A collection of snippets for coffeescript imported from TextMate files.",
-    "version": "1.1.0",
-    "publisher": "jhessin",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jhessin/vscode-coffee-snippets.git"
-    },
-    "engines": {
-        "vscode": "^1.20.0"
-    },
-    "activationEvents": [
-        "onCommand:coffeeSnip.interpolate"
+  "name": "coffee-snippets",
+  "displayName": "Coffee Snippets (from TextMate)",
+  "description": "A collection of snippets for coffeescript imported from TextMate files.",
+  "version": "1.1.0",
+  "publisher": "jhessin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhessin/vscode-coffee-snippets.git"
+  },
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "activationEvents": [
+    "onCommand:coffeeSnip.interpolate"
+  ],
+  "main": "./lib/extension",
+  "categories": [
+    "Snippets",
+    "Languages"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "coffeescript",
+        "path": "./snippets/snippets.json"
+      }
     ],
-    "main": "./lib/extension",
-    "categories": [
-        "Snippets",
-        "Languages"
+    "commands": [
+      {
+        "command": "coffeeSnip.interpolate",
+        "title": "Interpolate CoffeeScript literal"
+      }
     ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "coffeescript",
-                "path": "./snippets/snippets.json"
-            }
-        ],
-        "commands": [
-            {
-                "command": "coffeeSnip.interpolate",
-                "title": "Interpolate CoffeeScript literal"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "editor.action.insertSnippet",
-                "key": "[Equal]",
-                "args": {
-                    "name": "#"
-                },
-                "when": "editorTextFocus && editorLangId == coffeescript"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "coffee -o ./lib -cbtm ./src",
-        "dev": "coffee -o ./lib -cbtmw ./src",
-        "postinstall": "node ./node_modules/vscode/bin/install && coffee -o ./lib -cbtm ./src"
-    },
-    "babel": {
-        "presets": [
-            "env"
-        ]
-    },
-    "devDependencies": {
-        "coffeescript": "^2.2.2",
-        "babel-core": "^6.26.0",
-        "babel-preset-env": "^1.6.1",
-        "vscode": "^1.1.10"
-    }
+    "keybindings": [
+      {
+        "command": "coffeeSnip.interpolate",
+        "key": "[Equal]",
+        "when": "editorTextFocus && editorLangId == coffeescript"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "coffee -o ./lib -cbtm ./src",
+    "dev": "coffee -o ./lib -cbtmw ./src",
+    "postinstall": "node ./node_modules/vscode/bin/install && coffee -o ./lib -cbtm ./src"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "devDependencies": {
+    "coffeescript": "^2.2.2",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "vscode": "^1.1.10"
+  }
 }
