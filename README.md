@@ -17,6 +17,15 @@ I suggest you just start coding and appreciate the standard snippets from every 
 * There is a snippet that is supposed to automatically wrap a selection in `#{}` when you press `#` inside of an interpreted string i.e. `"Hello #{user.firstName}"`. It doesn't work and I have yet to figure out why. Any input in this regard would be appreciated.
 * UPDATE! I have been toying around with keybindings and have set up a command `coffeeSnip:interpolate` that can be used to produce the desired result. For some reason the keybinding isn't showing up until the command is run first (and then you need to bind the key yourself). More to come on this.
 
+To use this feature you need to put this in your keybindings.json
+```json
+{
+  "command": "coffeeSnip.interpolate",
+  "key": "#", # <-- This may need to be reasigned depending on your layout.
+  "when": "editorTextFocus && editorLangId == coffeescript"
+}
+```
+
 ---
 
 ## Release Notes

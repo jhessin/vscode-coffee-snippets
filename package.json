@@ -34,8 +34,11 @@
         ],
         "keybindings": [
             {
-                "command": "coffeeSnip.interpolate",
+                "command": "editor.action.insertSnippet",
                 "key": "[Equal]",
+                "args": {
+                    "name": "#"
+                },
                 "when": "editorTextFocus && editorLangId == coffeescript"
             }
         ]
