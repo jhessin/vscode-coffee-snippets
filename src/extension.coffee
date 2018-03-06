@@ -26,7 +26,6 @@ export activate = -> vscode.commands.registerTextEditorCommand 'coffeeSnip.inter
       templateStart = match.index
       templateEnd = matcher.lastIndex
       if templateStart < cursorOffset < templateEnd
-        # TODO: Take care of output here
         editor.insertSnippet(interpSnip, editor.selection.active)
         return resolve()
     editor.insertSnippet(snip, editor.selection.active)
