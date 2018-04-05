@@ -41,19 +41,21 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "coffee -o ./lib -cbtm ./src",
-        "dev": "coffee -o ./lib -cbtmw ./src",
-        "postinstall": "node ./node_modules/vscode/bin/install && coffee -o ./lib -cbtm ./src"
-    },
-    "babel": {
-        "presets": [
-            "env"
-        ]
+        "vscode:prepublish": "npm run compile",
+        "compile": "gulp coffee",
+        "watch": "gulp watch",
+        "postinstall": "node ./node_modules/vscode/bin/install && gulp coffee"
     },
     "devDependencies": {
-        "coffeescript": "^2.2.2",
         "babel-core": "^6.26.0",
         "babel-preset-env": "^1.6.1",
+        "coffeescript": "^2.2.4"
+    },
+    "dependencies": {
+        "gulp": "^3.9.1",
+        "gulp-coffee": "^3.0.2",
+        "gulp-coffeelint": "^0.6.0",
+        "gulp-sourcemaps": "^2.6.4",
         "vscode": "^1.1.10"
     }
 }

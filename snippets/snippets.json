@@ -115,7 +115,7 @@
   },
   "req": {
     "prefix": "req",
-    "body": "${2/^.*?([\\w_]+).*$/\\L$1/} = require ${2:'${1:sys}'}$3",
+    "body": "require '$1'$0",
     "description": "require",
     "scope": "source.coffee"
   }
