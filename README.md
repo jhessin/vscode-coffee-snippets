@@ -2,6 +2,8 @@
 
 This is a collection of snippets imported straight from the TextMate repo (here)[https://github.com/jashkenas/coffee-script-tmbundle.git]
 
+# NOTICE: No longer maintained. Feel free to use/create a fork if you are interested.
+
 ---
 
 ## Features
